@@ -1,9 +1,6 @@
 provider "local" {
 }
 
-provider "aws" {
-  region = "ap-northeast-2"
-}
 
 resource "local_file" "foo" {
   filename = "${path.module}/foo.txt"
@@ -20,7 +17,6 @@ output "file_bar" {
 
 resource "aws_vpc" "foo" {
   cidr_block = "10.100.0.0/16"
-
   tags = {
     "Name" = "Test VPC"
   }
