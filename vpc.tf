@@ -23,6 +23,7 @@ output "vpc_id" {
 }
 
 output "vpc_cidr" {
+  description = "IPv4 CIDR_BLOCK"
   value = module.vpc.cidr_block
 }
 
